@@ -1,5 +1,6 @@
 import turtle
 nice = turtle.Pen()
+turtle.bgcolor("black")
 for x in range(273):
     nice.pencolor('#4c4c4c')
     nice.speed(0)
