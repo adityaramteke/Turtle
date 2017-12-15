@@ -36,21 +36,21 @@ def curve (ttl, s, level):
 
 def main():
   # put label on top of page
-  turtle.title ('Recursive Figures')
-  
+  turtle.title ('Recursive Figures') 
+  turtle.bgcolor("black") 
   # setup screen size
   turtle.setup (1000, 1000, 0, 0)
 
   # create a turtle object
   ttl = turtle.Turtle()
-
+  ttl.color("white")
+  ttl.speed(0)
   # draw the sierpinski curve
   # curve (ttl, 15, 3)
 
   # draw gasket
   drawGasket (ttl, 200)
   
-  turtle.speed(0)
   # persist drawing
   turtle.done()
 

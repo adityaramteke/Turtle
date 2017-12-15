@@ -1,17 +1,12 @@
 import turtle
 import time
 
+turtle.bgcolor("black")
 print("Python Turtle Analogue Clock")
-print("By T Street")
 
 
 #Deal with different time zones
-ok = False
-while not(ok):
- print("\nFor example, for British summer time enter 1")
- offset = int(input("Enter offset from GMT (-11 to 11) :"))
- if offset >= -11 and offset <= 11:
-  ok = True
+ok = True
   
 wn = turtle.Screen()
 wn.title("TURTLE CLOCK")
@@ -22,6 +17,7 @@ SCALE = 1.7 # size of clock scale factor (try 2.0 to 0.5)
 mark = turtle.Turtle()
 mark.speed(200)
 mark.shape("circle")
+mark.color("white")
 for i in range(60):
       if i % 5 == 0:
             mark.pensize(10)
@@ -55,7 +51,8 @@ while True:
             hour.speed(100*SCALE)
             hour.pensize(10)
             hour.shape("blank")
-            hour.right(((b.tm_hour + offset) % 12) * 30 + b.tm_min * 0.5 )
+            hour.color("green")
+            hour.right(((b.tm_hour + 1) % 12) * 30 + b.tm_min * 0.5 )
             hour.backward(30*SCALE)
             hour.forward(160*SCALE)
 
@@ -63,6 +60,7 @@ while True:
             minute = turtle.Turtle()
             minute.speed(100)
             minute.shape("blank")
+            minute.color("yellow")
             minute.left(90)
             minute.pensize(6)
             minute.right((b.tm_min) * 6)

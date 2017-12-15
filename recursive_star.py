@@ -25,7 +25,9 @@ def recursive_star(turtle, n, r, depth, f):
         turtle.backward(r)
         turtle.left(360/n)
  
+turtle.bgcolor("black")
 fred = turtle.Turtle()
+fred.color("white")
 fred.speed("fastest")
 recursive_star(fred, 5 , 150, 4, 0.4)
  
@@ -54,3 +56,4 @@ def flower(x,y,r,g,b):
         fred.penup()
         flower(random.randint(-200,200), random.randint(-200,0),random.randint(0,255),
         random.randint(0,255),random.randint(0,255))
+

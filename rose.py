@@ -5,7 +5,7 @@ turtle.bgcolor("black")
 t = turtle.Pen()
 t.speed(0)
 t.color('red')
-for i in range(20):
+for i in range(30):
     t.circle(i * 3, 180)
     t.rt(45)
 
